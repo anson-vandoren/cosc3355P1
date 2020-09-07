@@ -19,6 +19,7 @@ func (m Memory) Load(addr string) uint16 {
 }
 
 // Store places the given value at the memory location given by addr
+// where addr is a hex string
 func (m Memory) Store(addr string, val uint16) (err error) {
 	intAddr, err := strconv.ParseInt(addr, 16, 16)
 	if err != nil {
